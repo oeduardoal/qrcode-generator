@@ -30,6 +30,7 @@ func getPort() string {
 func main() {
 
 	r := mux.NewRouter()
+	r.HandleFunc("/", GenerateQrCode).Methods("GET")
 	r.HandleFunc("/api/v1/generate", GenerateQrCode).Methods("GET")
 	p := getPort()
 	http.ListenAndServe(p, r)
