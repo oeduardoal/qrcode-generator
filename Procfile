@@ -1,1 +1,1 @@
-web: qrcode-generator
+web: bin/qrcode-generator
