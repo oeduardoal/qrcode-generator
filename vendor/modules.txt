@@ -1,0 +1,6 @@
+# github.com/boombuler/barcode v1.0.0
+github.com/boombuler/barcode
+github.com/boombuler/barcode/qr
+github.com/boombuler/barcode/utils
+# github.com/gorilla/mux v1.7.3
+github.com/gorilla/mux
