@@ -6,6 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"image/png"
 	"net/http"
+	"os"
 )
 
 func GenerateQrCode(w http.ResponseWriter, r *http.Request){
@@ -21,6 +22,6 @@ func main() {
 
 	r := mux.NewRouter()
 	r.HandleFunc("/api/v1/generate", GenerateQrCode).Methods("GET")
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServe(os.Getenv("PORT"), r)
 	
 }
