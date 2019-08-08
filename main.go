@@ -18,10 +18,20 @@ func GenerateQrCode(w http.ResponseWriter, r *http.Request){
 
 }
 
+func getPort() string {
+	p := os.Getenv("PORT")
+	if p != ""{
+		return ":" + p
+	}else {
+		return ":8080"
+	}
+}
+
 func main() {
 
 	r := mux.NewRouter()
 	r.HandleFunc("/api/v1/generate", GenerateQrCode).Methods("GET")
-	http.ListenAndServe(os.Getenv("PORT"), r)
+	p := getPort()
+	http.ListenAndServe(p, r)
 	
 }
