@@ -10,6 +10,6 @@ Only Test, not for prod
 
 Try, its free: 
 
-```javascript
+```
 https://go-qrcode-generator.herokuapp.com/api/v1/generate?q={type_here}
 ```
